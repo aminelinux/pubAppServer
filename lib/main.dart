@@ -14,7 +14,7 @@ void handleClient(Socket client) {
       '${client.remoteAddress.address}:${client.remotePort}');
 
   clients.add(ChatClient(client));
-
+  
   client.write("Welcome Client App!!! "
       "There are ${clients.length - 1} other clients\n");
 }
@@ -68,7 +68,7 @@ class ChatClient {
 
     clients.add(ChatClient(client));
 
-    client.write("Welcome to dart-chat! "
+    client.write("Welcome "
         "There are ${clients.length - 1} other clients\n");
   }
 
